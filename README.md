@@ -26,6 +26,8 @@ A workspace-setup script for **Hyprland** that automatically prepares a complete
 - Includes timing safeguards to prevent race conditions
 - Closes the launching terminal after execution
 - Validates installed applications and offers auto-install prompts
+- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ee9e977f-7627-4c1b-8260-388457dc00b3" />
+
 
 #### Requirements
 
