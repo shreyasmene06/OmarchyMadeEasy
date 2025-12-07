@@ -72,6 +72,8 @@ This script solves that by:
 - Auto-adds a Screensaver Maker tool to the system
 - Ensures font and styling remain 100% Omarchy-accurate
 - Improves customization workflow for users who rice their desktops
+- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/25afe442-82fa-4780-b563-a01352b22a02" />
+
 
 #### Supported System
 
