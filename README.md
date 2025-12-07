@@ -51,6 +51,42 @@ chmod +x rice.sh
 
 ---
 
+### `screensaver-maker-installer.sh`
+
+A utility script that automatically installs the Omarchy-compatible screensaver editor and makes it available as an application on the system.
+
+#### Why This Script Exists
+
+The built-in Omarchy screensaver uses a distinct ASCII font.  
+Editing its artwork is possible, but matching the exact font manually is tedious and error-prone.
+
+This script solves that by:
+
+- Installing the correct Omarchy screensaver editor
+- Allowing users to simply type text and generate a matching screensaver
+- Preserving the unique Omarchy aesthetic without font inconsistencies
+
+#### Features
+
+- Streamlined one-command installation
+- Auto-adds a Screensaver Maker tool to the system
+- Ensures font and styling remain 100% Omarchy-accurate
+- Improves customization workflow for users who rice their desktops
+
+#### Supported System
+
+This tool is **exclusively supported on Omarchy**.  
+It is not guaranteed to work on any other Linux distribution.
+
+#### Usage
+
+```bash
+chmod +x screensaver-maker-installer.sh
+./screensaver-maker-installer.sh
+```
+
+---
+
 ## Future Development
 
 Additional scripts will be added over time as Omarchy expands and matures.
