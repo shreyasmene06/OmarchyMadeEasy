@@ -89,6 +89,44 @@ chmod +x screensaver-maker-installer.sh
 
 ---
 
+### `motion-wallpaper.sh`
+
+A lightweight script for dynamic wallpapers that cleanly integrates with Wayland + Hyprland systems. Users can simply select a GIF or video file from their file manager, and it will be applied directly as a live wallpaper — no extra configuration required.
+
+Designed without any unnecessary extras:  
+just choose a file → set it as your wallpaper → done.
+
+#### Features
+
+- Supports both **GIF** and **video** wallpapers
+- File selection via user-friendly file picker
+- Automatically handles wallpaper rendering in the background
+- Focused on simplicity — minimal command usage
+- Clean replacement of old wallpaper instances
+
+#### Requirements
+
+- Hyprland (Wayland compositor)
+- Pipewire recommended for good video performance
+- A compatible media renderer (e.g., `mpvpaper` or similar)
+
+#### Supported Systems
+
+| Distribution | Status |
+|-------------|--------|
+| Omarchy | ✔ Tested & Supported |
+| Arch Linux + Hyprland | ✔ Confirmed working |
+| Other Arch-based Hyprland systems | Likely compatible but not officially tested |
+
+#### Usage
+
+```bash
+chmod +x motion-wallpaper.sh
+./motion-wallpaper.sh
+```
+
+---
+
 ## Future Development
 
 Additional scripts will be added over time as Omarchy expands and matures.
