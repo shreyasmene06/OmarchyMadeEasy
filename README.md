@@ -143,6 +143,8 @@ Run once, and the effect is automatically applied every session.
 - Adds the startup execution line in Hyprland config (only once)
 - Backs up your current config for safety
 - Reloads Hyprland on completion
+- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/54192fde-c7aa-4c96-ba86-8bcdc5bbceb1" />
+
 
 #### Visual Improvements Applied
 
