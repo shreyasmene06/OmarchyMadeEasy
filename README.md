@@ -103,6 +103,8 @@ just choose a file → set it as your wallpaper → done.
 - Automatically handles wallpaper rendering in the background
 - Focused on simplicity — minimal command usage
 - Clean replacement of old wallpaper instances
+- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8db65a6d-fdc9-49b2-8c93-904648aee286" />
+
 
 #### Requirements
 
