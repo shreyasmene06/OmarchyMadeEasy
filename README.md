@@ -129,6 +129,79 @@ chmod +x motion-wallpaper.sh
 
 ---
 
+### `enable-vibrance.sh`
+
+A setup script that enhances the display output on Hyprland using **hyprshade** and a custom color-tuning shader. It is designed to **make your screen look closer to OLED** with stronger color depth, richer blacks, and higher contrast — without oversharpening or distorting the image.
+
+Run once, and the effect is automatically applied every session.
+
+#### What This Script Does
+
+- Installs a custom GLSL shader inspired by NVIDIA Control Panel color controls
+- Enables deeper contrast and boosted vibrance for an **OLED-like appearance**
+- Creates the required shader directory automatically
+- Adds the startup execution line in Hyprland config (only once)
+- Backs up your current config for safety
+- Reloads Hyprland on completion
+
+#### Visual Improvements Applied
+
+| Enhancement | Purpose |
+|------------|---------|
+| Digital Vibrance | Boosts saturation for richer colors |
+| Contrast | Deepens blacks and improves visual depth |
+| Brightness | Controlled lift without washing out shadows |
+| Gamma | Balanced mid-tones for more natural scene lighting |
+
+All values can be easily fine-tuned in the shader file.
+
+#### Requirements
+
+- Hyprland compositor
+- hyprshade installed
+- GPU with GLSL ES 3.0 compatibility
+
+#### Supported Systems
+
+| System | Status |
+|--------|--------|
+| Omarchy | ✔ Fully supported |
+| Arch Linux + Hyprland | ✔ Compatible |
+| Other Arch-based Hyprland setups | Expected to work |
+
+#### Usage
+
+```bash
+chmod +x enable-vibrance.sh
+./enable-vibrance.sh
+```
+
+After running, your screen will reload with the enhanced vibrance and contrast applied.
+
+To disable later, simply remove the injected line from:
+```
+~/.config/hypr/hyprland.conf
+```
+
+#### Customization
+
+Edit:
+```
+~/.config/hypr/shaders/vibrance.glsl
+```
+
+Example variable block:
+```glsl
+float vibrance = 0.5;
+float contrast = 1.1;
+float brightness = 0.0;
+float gamma = 1.0;
+```
+
+Adjust to your preferred display feel — dark mode gaming, cinematic tones, or a bright OLED-like finish.
+
+---
+
 ## Future Development
 
 Additional scripts will be added over time as Omarchy expands and matures.
