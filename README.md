@@ -246,6 +246,112 @@ cp -r dotfiles/kitty ~/.config/
 
 ---
 
+# Live Wallpaper Manager Installer for Hyprland
+
+A single run installer that sets up a Live Wallpaper TUI manager on Arch based Hyprland setups. It installs the script locally, adds a Hyprland keybind to open it in a floating Kitty window, and reloads Hyprland so the bind works immediately.
+
+## What This Script Does
+
+1. Installs `live-wall.sh` to `~/.local/bin/live-wall.sh`
+2. Creates the config directory `~/.config/live-wall` and the file `wallpapers.conf`
+3. Adds a Hyprland keybind in `~/.config/hypr/bindings.conf` only if not already present
+4. Adds floating window rules for the popup terminal
+5. Reloads Hyprland after updating config when `hyprctl` is available
+6. Checks for required dependencies and prints install commands if missing
+
+## Keybind Installed
+
+Opens the manager in Kitty as a floating window.
+
+Keybind
+
+`SUPER + W`
+
+## Requirements
+
+1. Hyprland
+2. kitty
+3. linux wallpaper engine
+
+The script uses the command `linux-wallpaperengine`.
+
+## Install
+
+Run directly from GitHub.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/shreyasmene06/OmarchyMadeEasy/main/install-live-wall.sh | bash
+```
+
+## Uninstall
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/shreyasmene06/OmarchyMadeEasy/main/install-live-wall.sh | bash -s -- --uninstall
+```
+
+Uninstall removes the installed script and deletes the injected keybind block from `~/.config/hypr/bindings.conf`. Your wallpaper list is kept at `~/.config/live-wall`.
+
+## Notes
+
+1. The popup uses `kitty --class floating-term` and Hyprland window rules match `class:^(floating-term)$`
+2. The installer backs up `~/.config/hypr/bindings.conf` to `bindings.conf.backup` before editing
+3. The wallpaper engine target is currently hardcoded as `--screen-root eDP-1` inside `live-wall.sh`
+
+If your monitor output name differs, update the output in `live-wall.sh`.
+
+# Live Wallpaper Manager Installer for Hyprland
+
+A single run installer that sets up a Live Wallpaper TUI manager on Arch based Hyprland setups. It installs the script locally, adds a Hyprland keybind to open it in a floating Kitty window, and reloads Hyprland so the bind works immediately.
+
+## What This Script Does
+
+1. Installs `live-wall.sh` to `~/.local/bin/live-wall.sh`
+2. Creates the config directory `~/.config/live-wall` and the file `wallpapers.conf`
+3. Adds a Hyprland keybind in `~/.config/hypr/bindings.conf` only if not already present
+4. Adds floating window rules for the popup terminal
+5. Reloads Hyprland after updating config when `hyprctl` is available
+6. Checks for required dependencies and prints install commands if missing
+
+## Keybind Installed
+
+Opens the manager in Kitty as a floating window.
+
+Keybind
+
+`SUPER + W`
+
+## Requirements
+
+1. Hyprland
+2. kitty
+3. linux wallpaper engine
+
+The script uses the command `linux-wallpaperengine`.
+
+## Install
+
+Run directly from GitHub.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/shreyasmene06/OmarchyMadeEasy/main/install-live-wall.sh | bash
+```
+
+## Uninstall
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/shreyasmene06/OmarchyMadeEasy/main/install-live-wall.sh | bash -s -- --uninstall
+```
+
+Uninstall removes the installed script and deletes the injected keybind block from `~/.config/hypr/bindings.conf`. Your wallpaper list is kept at `~/.config/live-wall`.
+
+## Notes
+
+1. The popup uses `kitty --class floating-term` and Hyprland window rules match `class:^(floating-term)$`
+2. The installer backs up `~/.config/hypr/bindings.conf` to `bindings.conf.backup` before editing
+3. The wallpaper engine target is currently hardcoded as `--screen-root eDP-1` inside `live-wall.sh`
+
+If your monitor output name differs, update the output in `live-wall.sh`.
+
 ## Future Development
 
 Additional scripts will be added over time as Omarchy expands and matures.
