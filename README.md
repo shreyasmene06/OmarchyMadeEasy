@@ -204,6 +204,48 @@ Adjust to your preferred display feel — dark mode gaming, cinematic tones, or 
 
 ---
 
+## Dotfiles
+
+This repository also includes a complete set of configuration files for the **Omarchy** environment, providing a consistent and polished setup across all components.
+
+### Included Configurations
+
+| Component | Description |
+|-----------|-------------|
+| **hypr/** | Complete Hyprland configuration including bindings, monitors, input, autostart, and 140+ custom GLSL shaders |
+| **waybar/** | Top bar configuration with custom styling and modules |
+| **kitty/** | Terminal emulator configuration with JetBrainsMono Nerd Font |
+| **walker/** | Application launcher configuration with custom keybinds and providers |
+| **neofetch/** | System information display with custom theming |
+| **hyprlock/** | Screen lock configuration |
+| **hypridle/** | Idle management settings |
+| **hyprpaper/** | Wallpaper daemon configuration |
+| **hyprland-preview-share-picker/** | Screen sharing picker styling |
+| **systemd/** | User service configurations |
+| **libreoffice/** | Office suite customization |
+
+### Notable Features
+
+- **140+ GLSL Shaders** — Extensive collection including cyberpunk themes, CRT effects, retro aesthetics, color grading, and creative filters
+- **Modular Hyprland Setup** — Split configuration files for easy customization (bindings, monitors, input, autostart, etc.)
+- **Consistent Theming** — All components integrate with Omarchy's theme system
+- **Optimized for Workflow** — Keybinds and settings designed for productivity
+
+### Usage
+
+Copy the desired configuration files to your `~/.config/` directory:
+
+```bash
+cp -r dotfiles/hypr ~/.config/
+cp -r dotfiles/waybar ~/.config/
+cp -r dotfiles/kitty ~/.config/
+# ... etc
+```
+
+**Note:** These dotfiles are specifically configured for the Omarchy environment and may require adjustments for use on other systems.
+
+---
+
 ## Future Development
 
 Additional scripts will be added over time as Omarchy expands and matures.
