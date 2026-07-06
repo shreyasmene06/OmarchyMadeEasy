@@ -324,6 +324,92 @@ Make sure the script is executable:
 chmod +x ~/.config/waybar/calendar/calendar.sh
 ```
 
+### `neofetch-ascii-setter/`
+
+A tool to **permanently replace the neofetch ASCII logo** with any custom ASCII art of your choice. Available in two flavors: a polished web UI and a terminal script.
+
+---
+
+#### Web UI — `server.py`
+
+A local web application with a split-panel editor. Paste your ASCII art on the left, see a live terminal-style preview on the right, and click **Done** to apply it.
+
+##### Features
+
+- **Live preview** with switchable terminal colors (cyan, green, magenta, etc.)
+- Line numbers, character/line counts, and tab key support
+- **Ctrl+Enter** shortcut to apply
+- **Reset Default** button to restore the original distro logo
+- Auto-backup of original `config.conf` on first use
+- **Zero dependencies** — uses only the Python standard library
+
+##### Requirements
+
+- Python 3
+- Neofetch installed and run at least once
+
+##### Usage
+
+```bash
+cd neofetch-ascii-setter
+python3 server.py
+```
+
+Then open `http://127.0.0.1:8642` in your browser.
+
+---
+
+#### Terminal Script — `set-ascii.sh`
+
+A fully interactive terminal script for users who prefer staying in the CLI.
+
+##### Features
+
+- Colorful TUI with previews and confirmation prompts
+- Multiple input modes: interactive paste, file, and pipe
+- Show current art and reset to default
+- Auto-backup of original `config.conf` on first use
+
+##### Usage
+
+```bash
+chmod +x set-ascii.sh
+```
+
+| Command | Description |
+|---------|-------------|
+| `./set-ascii.sh` | Interactive mode — paste art, press `Ctrl+D` to finish |
+| `./set-ascii.sh -f FILE` | Load ASCII art from a file |
+| `cat art.txt \| ./set-ascii.sh` | Pipe in art (auto-applies, no prompt) |
+| `./set-ascii.sh -s` | Show current custom ASCII art |
+| `./set-ascii.sh -r` | Reset to default distro logo |
+| `./set-ascii.sh -h` | Show help |
+
+##### Examples
+
+```bash
+# Interactive paste mode
+./set-ascii.sh
+
+# From a file
+./set-ascii.sh -f ~/my-cool-art.txt
+
+# Pipe from another command
+figlet "Hello" | ./set-ascii.sh
+
+# Check what's currently set
+./set-ascii.sh -s
+
+# Reset back to default
+./set-ascii.sh -r
+```
+
+##### How It Works
+
+Both tools modify `~/.config/neofetch/config.conf` by changing the `image_source` setting to point at `~/.config/neofetch/custom_ascii.txt`, where your art is saved. Resetting sets `image_source` back to `"auto"`.
+
+---
+
 ## Future Development
 
 Additional scripts will be added over time as Omarchy expands and matures.
